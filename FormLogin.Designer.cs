@@ -54,6 +54,7 @@
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // tboxParola
             // 
@@ -64,6 +65,8 @@
             this.tboxParola.Size = new System.Drawing.Size(783, 33);
             this.tboxParola.TabIndex = 5;
             this.tboxParola.Text = "Introduce-ti parola dumneavoastra";
+            this.tboxParola.Enter += new System.EventHandler(this.tboxParola_Enter);
+            this.tboxParola.Leave += new System.EventHandler(this.tboxParola_Leave);
             // 
             // tboxEmail
             // 
@@ -74,6 +77,8 @@
             this.tboxEmail.Size = new System.Drawing.Size(783, 33);
             this.tboxEmail.TabIndex = 6;
             this.tboxEmail.Text = "Introduce-ti emailul dumneavoastra";
+            this.tboxEmail.Enter += new System.EventHandler(this.tboxEmail_Enter);
+            this.tboxEmail.Leave += new System.EventHandler(this.tboxEmail_Leave);
             // 
             // FormLogin
             // 
@@ -90,6 +95,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormLogin";
             this.Text = "FormLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

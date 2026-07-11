@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelNavigare = new System.Windows.Forms.Panel();
+            this.btnCulori = new System.Windows.Forms.Button();
             this.btnMeteo = new System.Windows.Forms.Button();
             this.btnLectii = new System.Windows.Forms.Button();
             this.btnPoster = new System.Windows.Forms.Button();
@@ -40,6 +42,7 @@
             this.panelTitlu = new System.Windows.Forms.Panel();
             this.lblTitlu = new System.Windows.Forms.Label();
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelNavigare.SuspendLayout();
             this.panelTitlu.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +50,7 @@
             // panelNavigare
             // 
             this.panelNavigare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(84)))), ((int)(((byte)(46)))));
+            this.panelNavigare.Controls.Add(this.btnCulori);
             this.panelNavigare.Controls.Add(this.btnMeteo);
             this.panelNavigare.Controls.Add(this.btnLectii);
             this.panelNavigare.Controls.Add(this.btnPoster);
@@ -61,6 +65,22 @@
             this.panelNavigare.Name = "panelNavigare";
             this.panelNavigare.Size = new System.Drawing.Size(280, 600);
             this.panelNavigare.TabIndex = 1;
+            // 
+            // btnCulori
+            // 
+            this.btnCulori.FlatAppearance.BorderSize = 0;
+            this.btnCulori.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.btnCulori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCulori.ForeColor = System.Drawing.Color.White;
+            this.btnCulori.Location = new System.Drawing.Point(0, 449);
+            this.btnCulori.Name = "btnCulori";
+            this.btnCulori.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnCulori.Size = new System.Drawing.Size(280, 35);
+            this.btnCulori.TabIndex = 11;
+            this.btnCulori.Text = "Culori";
+            this.btnCulori.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCulori.UseVisualStyleBackColor = true;
+            this.btnCulori.Click += new System.EventHandler(this.btnCulori_Click);
             // 
             // btnMeteo
             // 
@@ -179,7 +199,7 @@
             this.btnDelogare.FlatAppearance.BorderSize = 0;
             this.btnDelogare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelogare.ForeColor = System.Drawing.Color.White;
-            this.btnDelogare.Location = new System.Drawing.Point(0, 481);
+            this.btnDelogare.Location = new System.Drawing.Point(0, 490);
             this.btnDelogare.Name = "btnDelogare";
             this.btnDelogare.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnDelogare.Size = new System.Drawing.Size(280, 32);
@@ -192,6 +212,7 @@
             // panelTitlu
             // 
             this.panelTitlu.BackColor = System.Drawing.Color.Green;
+            this.panelTitlu.Controls.Add(this.button1);
             this.panelTitlu.Controls.Add(this.lblTitlu);
             this.panelTitlu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitlu.Location = new System.Drawing.Point(0, 0);
@@ -222,6 +243,24 @@
             this.panelCentral.Size = new System.Drawing.Size(1000, 600);
             this.panelCentral.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(112)))), ((int)(((byte)(63)))));
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(9, 12);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(56, 53);
+            this.button1.TabIndex = 12;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -239,6 +278,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoGreen ";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelNavigare.ResumeLayout(false);
             this.panelTitlu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -259,6 +299,8 @@
         private System.Windows.Forms.Button btnPoster;
         private System.Windows.Forms.Button btnCalculatorKcal;
         private System.Windows.Forms.Button btnCalculatorCarbon;
+        private System.Windows.Forms.Button btnCulori;
+        private System.Windows.Forms.Button button1;
     }
 }
 

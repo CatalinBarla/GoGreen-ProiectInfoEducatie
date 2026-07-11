@@ -104,9 +104,8 @@
             this.lblResult.AutoSize = true;
             this.lblResult.Location = new System.Drawing.Point(167, 362);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(72, 19);
+            this.lblResult.Size = new System.Drawing.Size(0, 19);
             this.lblResult.TabIndex = 7;
-            this.lblResult.Text = "Rezultat:";
             // 
             // btnCalculate
             // 
@@ -138,6 +137,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCarbon";
             this.Text = "FormCarbon";
+            this.Load += new System.EventHandler(this.FormCarbon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

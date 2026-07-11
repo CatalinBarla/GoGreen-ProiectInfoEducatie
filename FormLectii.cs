@@ -7,14 +7,92 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace GoGreen
 {
     public partial class FormLectii : Form
     {
+        int capitol = 0, lectie = 0;
+
+        private bool[] Cap1 = new bool[10] { false, false, false, false, false, false, false, false, false, false };
+        private bool[] Cap2 = new bool[10] { false, false, false, false, false, false, false, false, false, false };
+
         public FormLectii()
         {
             InitializeComponent();
         }
+
+        private void ComutaCapitol(Panel panel)
+        {
+            if (panel.Size.Height == 40)
+            {
+                panel.Size = new Size(panel.Width, 200);
+            }
+            else
+            {
+                panel.Size = new Size(panel.Width, 40);
+            }
+        }
+
+        private void btnCapitol1_Click(object sender, EventArgs e)
+        {
+            ComutaCapitol(panelCapitol1);
+        }
+
+        private void btnCapitol2_Click(object sender, EventArgs e)
+        {
+            ComutaCapitol(panelCapitol2);
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            capitol = int.Parse(button.Name[button.Name.Length - 1].ToString());
+            lectie = int.Parse(button.Name[button.Name.Length - 5].ToString());
+
+            if(capitol == 1)
+            {
+                if (Cap1[lectie] == false)
+                {
+                    Cap1[lectie] = true;
+                    progressBarCap1.Value += 25;
+                }
+            }
+            else if(capitol == 2)
+            {
+                if (Cap2[lectie] == false)
+                {
+                    Cap2[lectie] = true;
+                    progressBarCap2.Value += 25;
+                }
+            }
+
+            LoadIntoTextBox();
+        }
+
+        private void LoadIntoTextBox()
+        {
+            string text = "";
+            using (MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection("Server=localhost;Database=database;Uid=root;Pwd=;"))
+            {
+                conn.Open();
+                string query = "SELECT Text FROM Lectii WHERE Capitol = @capitol AND NumarLectie = @NumarLectie";
+                using (MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Capitol", capitol);
+                    cmd.Parameters.AddWithValue("@NumarLectie", lectie);
+                    using (MySql.Data.MySqlClient.MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string textBrut = reader["Text"].ToString();
+                            richTextBox1.Text = textBrut.Replace("\r", "").Replace("\n", Environment.NewLine + Environment.NewLine);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+

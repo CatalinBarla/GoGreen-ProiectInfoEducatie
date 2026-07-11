@@ -8,7 +8,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace GoGreen
 {
@@ -16,15 +15,13 @@ namespace GoGreen
     {
         public event EventHandler LoginSucces;
         public event EventHandler SignUpIncarcat;
+
+        private const string PlaceholderEmail = "Introduce-ti emailul dumneavoastra";
+        private const string PlaceholderParola = "Introduce-ti parola dumneavoastra";
+
         public FormLogin()
         {
             InitializeComponent();
-            tboxEmail.Enter += tboxEmail_Enter;
-            tboxEmail.Leave += tboxEmail_Leave;
-            tboxParola.Enter += tboxParola_Enter;
-            tboxParola.Leave += tboxParola_Leave;
-            btnLogin.Click += btnLogin_Click;
-            btnSignUp.Click += btnSignUp_Click;
         }
 
         private string CripteazaParola(string parolaBruta)
@@ -42,78 +39,118 @@ namespace GoGreen
                 return builder.ToString();
             }
         }
-
         private void tboxEmail_Enter(object sender, EventArgs e)
         {
-            tboxEmail.Text = "";
-            tboxEmail.ForeColor = Color.Black;
+            if (tboxEmail.Text == PlaceholderEmail)
+            {
+                tboxEmail.Text = "";
+                tboxEmail.ForeColor = Culori.TextColor;
+            }
         }
 
         private void tboxEmail_Leave(object sender, EventArgs e)
         {
-            if (tboxEmail.Text == "")
+            if (string.IsNullOrWhiteSpace(tboxEmail.Text))
             {
-                tboxEmail.Text = "Introduce-ti emailul dumneavoastra";
+                tboxEmail.Text = PlaceholderEmail;
                 tboxEmail.ForeColor = Color.Gray;
             }
         }
-
         private void tboxParola_Enter(object sender, EventArgs e)
         {
-            tboxParola.Text = "";
-            tboxParola.ForeColor = Color.Black;
-            tboxParola.PasswordChar = '*';
+            if (tboxParola.Text == PlaceholderParola)
+            {
+                tboxParola.Text = "";
+                tboxParola.ForeColor = Culori.TextColor;
+                tboxParola.PasswordChar = '*';
+            }
         }
 
         private void tboxParola_Leave(object sender, EventArgs e)
         {
-            if (tboxParola.Text == "")
+            if (string.IsNullOrWhiteSpace(tboxParola.Text))
             {
-                tboxParola.Text = "Introduce-ti parola dumneavoastra";
+                tboxParola.Text = PlaceholderParola;
                 tboxParola.ForeColor = Color.Gray;
                 tboxParola.PasswordChar = '\0';
             }
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string email = tboxEmail.Text;
-            string parola = CripteazaParola(tboxParola.Text);
+            string emailIntroduis = tboxEmail.Text.Trim();
+            string parolaIntroduse = tboxParola.Text;
 
-            Utilizatori utilizator = Utilizatori._utilizatori.FirstOrDefault(u => u.Email == email);
-
-            if (utilizator == null)
+            if (emailIntroduis == PlaceholderEmail || string.IsNullOrWhiteSpace(emailIntroduis) ||
+                parolaIntroduse == PlaceholderParola || string.IsNullOrWhiteSpace(parolaIntroduse))
             {
-                MessageBox.Show("Email inexistent!");
-                tboxEmail.Text = "Introduce-ti emailul dumneavoastra";
-                tboxEmail.ForeColor = Color.Gray;
-                tboxParola.Text = "Introduce-ti parola dumneavoastra";
-                tboxParola.ForeColor = Color.Gray;
-                tboxParola.PasswordChar = '\0';
+                MessageBox.Show("Vă rugăm să completați ambele câmpuri.", "Câmpuri incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (utilizator.parola == parola)
+            try
             {
-                MessageBox.Show("Login successful!");
-                Utilizatori.utilizatorlogat = utilizator;
-                LoginSucces?.Invoke(this, EventArgs.Empty);
-                this.Close();
+                Utilizatori.LoadInto_utilizatori();
+
+                string parolaCriptata = CripteazaParola(parolaIntroduse);
+
+                Utilizatori utilizatorGasit = Utilizatori._utilizatori.FirstOrDefault(u =>
+                    string.Equals(u.Email, emailIntroduis, StringComparison.OrdinalIgnoreCase) &&
+                    u.parola == parolaCriptata);
+
+                if (utilizatorGasit != null)
+                {
+                    Utilizatori.utilizatorlogat = utilizatorGasit;
+
+                    MessageBox.Show($"Autentificare reușită! Bine ai venit, {utilizatorGasit.Nume}!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LoginSucces?.Invoke(this, EventArgs.Empty);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Emailul sau parola introduse sunt incorecte.", "Eroare autentificare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Email sau parola incorecta!");
-                tboxEmail.Text = "";
-                tboxParola.Text = "";
-                return;
+                MessageBox.Show($"A apărut o eroare la conectarea cu baza de date: {ex.Message}", "Eroare conexiune MySQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
-        { 
+        {
             SignUpIncarcat?.Invoke(this, EventArgs.Empty);
             this.Close();
+        }
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            AplicaTemeCulori();
+            Culori.CuloriSchimbate += Culori_CuloriSchimbate;
+
+            tboxEmail_Leave(null, null);
+            tboxParola_Leave(null, null);
+        }
+
+        private void AplicaTemeCulori()
+        {
+            this.BackColor = Culori.Backgroundcolor;
+            foreach (Control c in this.Controls)
+            {
+                if (c is TextBox txt && (txt.Text == PlaceholderEmail || txt.Text == PlaceholderParola))
+                {
+                    txt.ForeColor = Color.Gray;
+                }
+                else
+                {
+                    c.ForeColor = Culori.TextColor;
+                }
+            }
+        }
+
+        private void Culori_CuloriSchimbate(object sender, EventArgs e)
+        {
+            AplicaTemeCulori();
         }
     }
 }

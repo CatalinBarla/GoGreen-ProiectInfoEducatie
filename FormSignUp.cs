@@ -82,5 +82,23 @@ namespace GoGreen
                 return builder.ToString();
             }
         }
+
+        private void FormSignUp_Load(object sender, EventArgs e)
+        {
+            AplicaTemeCulori();
+            Culori.CuloriSchimbate += Culori_CuloriSchimbate;
+        }
+        private void AplicaTemeCulori()
+        {
+            this.BackColor = Culori.Backgroundcolor;
+            foreach (Control c in this.Controls)
+            {
+                c.ForeColor = Culori.TextColor;
+            }
+        }
+        private void Culori_CuloriSchimbate(object sender, EventArgs e)
+        {
+            AplicaTemeCulori();
+        }
     }
 }

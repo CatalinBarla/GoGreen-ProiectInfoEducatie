@@ -49,7 +49,7 @@ namespace GoGreen
         private void LoginForm_LoginSucces(object sender, EventArgs e)
         {
             btnLogin.Enabled = false;
-            
+
         }
 
         private void btnIesire_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace GoGreen
 
         private void lblStangaClick(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnDelogare_Click(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace GoGreen
 
             DialogResult result = MessageBox.Show("Sunteți sigur că doriți să vă delogați?", "Confirmare delogare", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 Utilizatori.utilizatorlogat = null;
                 IncarcaFormularInPanel(new FormLogin());
@@ -94,7 +94,7 @@ namespace GoGreen
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(Utilizatori.utilizatorlogat == null)
+            if (Utilizatori.utilizatorlogat == null)
             {
                 MessageBox.Show("Nu există niciun utilizator logat.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -119,7 +119,7 @@ namespace GoGreen
                 MessageBox.Show("Nu există niciun utilizator logat.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-           // IncarcaFormularInPanel();
+            IncarcaFormularInPanel(new FormCalculatorCalorii());
         }
 
         private void btnPoster_Click(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace GoGreen
                 MessageBox.Show("Nu există niciun utilizator logat.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-           // IncarcaFormularInPanel(new FormPoster());
+           IncarcaFormularInPanel(new FormAfis());
         }
 
         private void btnLectii_Click(object sender, EventArgs e)
@@ -152,6 +152,36 @@ namespace GoGreen
             }
             FormMeteo op = new FormMeteo();
             Hide(); op.ShowDialog(); Show();
+        }
+
+        private void btnCulori_Click(object sender, EventArgs e)
+        {
+            FormSelectareCulori op = new FormSelectareCulori();
+            op.ShowDialog();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            AplicaTemeCulori();
+            Culori.CuloriSchimbate += Culori_CuloriSchimbate;
+        }
+        private void AplicaTemeCulori()
+        {
+            panelCentral.BackColor = Culori.Backgroundcolor;
+            foreach (Control c in panelCentral.Controls)
+            {
+                c.ForeColor = Culori.TextColor;
+            }
+        }
+        private void Culori_CuloriSchimbate(object sender, EventArgs e)
+        {
+            AplicaTemeCulori();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormDespre op = new FormDespre();
+            op.ShowDialog();
         }
     }
 }
