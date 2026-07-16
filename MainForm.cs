@@ -18,6 +18,7 @@ namespace GoGreen
         {
             InitializeComponent();
             Utilizatori.LoadInto_utilizatori();
+            Achievements.LoadIntoList();
             IncarcaFormularInPanel(new FormLogin());
         }
         public void IncarcaFormularInPanel(Form formularNou)
@@ -76,6 +77,9 @@ namespace GoGreen
             {
                 Utilizatori.utilizatorlogat = null;
                 IncarcaFormularInPanel(new FormLogin());
+
+                Culori.Backgroundcolor = Culori.DefaultColor;
+                Culori.TextColor = Color.Black;
             }
         }
 
@@ -181,6 +185,17 @@ namespace GoGreen
         private void button1_Click(object sender, EventArgs e)
         {
             FormDespre op = new FormDespre();
+            op.ShowDialog();
+        }
+
+        private void btnAchievements_Click(object sender, EventArgs e)
+        {
+            if(Utilizatori.utilizatorlogat == null)
+            {
+                MessageBox.Show("Nu există niciun utilizator logat.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            FormAchievements op = new FormAchievements();
             op.ShowDialog();
         }
     }

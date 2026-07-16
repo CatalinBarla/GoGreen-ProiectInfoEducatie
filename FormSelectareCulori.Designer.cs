@@ -78,7 +78,7 @@
             this.btnBackground.Name = "btnBackground";
             this.btnBackground.Size = new System.Drawing.Size(210, 30);
             this.btnBackground.TabIndex = 4;
-            this.btnBackground.Text = "Schimba culoare fundal";
+            this.btnBackground.Text = "Schimbă culoare fundal";
             this.btnBackground.UseVisualStyleBackColor = true;
             this.btnBackground.Click += new System.EventHandler(this.btnBackground_Click);
             // 
@@ -88,7 +88,7 @@
             this.btnText.Name = "btnText";
             this.btnText.Size = new System.Drawing.Size(210, 30);
             this.btnText.TabIndex = 5;
-            this.btnText.Text = "Schimba culoare text";
+            this.btnText.Text = "Schimbă culoare text";
             this.btnText.UseVisualStyleBackColor = true;
             this.btnText.Click += new System.EventHandler(this.btnText_Click);
             // 

@@ -40,6 +40,19 @@ namespace GoGreen
 
             lblResult.Text = $"Amprenta de carbon totală: {totalCarbonFootprint:N2} kg CO2/an\n" +
                              $"({(totalCarbonFootprint / 1000):N2} tone CO2/an)";
+
+            if (Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteCarbon < 15)
+            {
+                Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteCarbon += 5;
+                MessageBox.Show("Felicitări! Ai câștigat 5 puncte pentru amprenta de carbon!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Ai atins deja punctajul maxim pentru amprenta de carbon.", "Informație", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            Achievements.UpdateInBazaDeDate();
         }
 
         private void txtElectricity_KeyPress(object sender, KeyPressEventArgs e)

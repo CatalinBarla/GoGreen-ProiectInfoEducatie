@@ -65,6 +65,9 @@ namespace GoGreen
             Utilizatori.SaveToUtilizatoriDB();
 
             MessageBox.Show("Contul a fost creat cu succes!");
+
+            Achievements achievements = new Achievements(0, 0, 0, 0, 0, 0, tboxEmail.Text);
+
             this.Close();
         }
         private string CripteazaParola(string parolaBruta)

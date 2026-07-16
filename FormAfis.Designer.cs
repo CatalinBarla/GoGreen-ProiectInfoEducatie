@@ -51,7 +51,7 @@
             this.btnIncarcaImagine.Name = "btnIncarcaImagine";
             this.btnIncarcaImagine.Size = new System.Drawing.Size(373, 32);
             this.btnIncarcaImagine.TabIndex = 0;
-            this.btnIncarcaImagine.Text = "Incarca Imaginea";
+            this.btnIncarcaImagine.Text = "Incarcă Imagine";
             this.btnIncarcaImagine.UseVisualStyleBackColor = true;
             this.btnIncarcaImagine.Click += new System.EventHandler(this.btnIncarcaImagine_Click);
             // 
@@ -72,7 +72,7 @@
             this.btnSalveazaAfis.Name = "btnSalveazaAfis";
             this.btnSalveazaAfis.Size = new System.Drawing.Size(373, 32);
             this.btnSalveazaAfis.TabIndex = 2;
-            this.btnSalveazaAfis.Text = "Salveaza Afis";
+            this.btnSalveazaAfis.Text = "Salvează Afis";
             this.btnSalveazaAfis.UseVisualStyleBackColor = true;
             this.btnSalveazaAfis.Click += new System.EventHandler(this.btnSalveazaAfis_Click);
             // 
@@ -120,7 +120,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(218, 32);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Seteaza raza";
+            this.button1.Text = "Setează raza";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -140,7 +140,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(218, 32);
             this.button2.TabIndex = 11;
-            this.button2.Text = "Seteaza Scaleul";
+            this.button2.Text = "Setează Scaleul";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

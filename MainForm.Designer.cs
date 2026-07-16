@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelNavigare = new System.Windows.Forms.Panel();
+            this.btnAchievements = new System.Windows.Forms.Button();
             this.btnCulori = new System.Windows.Forms.Button();
             this.btnMeteo = new System.Windows.Forms.Button();
             this.btnLectii = new System.Windows.Forms.Button();
@@ -40,9 +41,9 @@
             this.btnIesire = new System.Windows.Forms.Button();
             this.btnDelogare = new System.Windows.Forms.Button();
             this.panelTitlu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblTitlu = new System.Windows.Forms.Label();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelNavigare.SuspendLayout();
             this.panelTitlu.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // panelNavigare
             // 
             this.panelNavigare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(84)))), ((int)(((byte)(46)))));
+            this.panelNavigare.Controls.Add(this.btnAchievements);
             this.panelNavigare.Controls.Add(this.btnCulori);
             this.panelNavigare.Controls.Add(this.btnMeteo);
             this.panelNavigare.Controls.Add(this.btnLectii);
@@ -65,6 +67,22 @@
             this.panelNavigare.Name = "panelNavigare";
             this.panelNavigare.Size = new System.Drawing.Size(280, 600);
             this.panelNavigare.TabIndex = 1;
+            // 
+            // btnAchievements
+            // 
+            this.btnAchievements.FlatAppearance.BorderSize = 0;
+            this.btnAchievements.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.btnAchievements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAchievements.ForeColor = System.Drawing.Color.White;
+            this.btnAchievements.Location = new System.Drawing.Point(0, 408);
+            this.btnAchievements.Name = "btnAchievements";
+            this.btnAchievements.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnAchievements.Size = new System.Drawing.Size(280, 35);
+            this.btnAchievements.TabIndex = 12;
+            this.btnAchievements.Text = "Achievementuri";
+            this.btnAchievements.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAchievements.UseVisualStyleBackColor = true;
+            this.btnAchievements.Click += new System.EventHandler(this.btnAchievements_Click);
             // 
             // btnCulori
             // 
@@ -109,7 +127,7 @@
             this.btnLectii.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnLectii.Size = new System.Drawing.Size(280, 35);
             this.btnLectii.TabIndex = 9;
-            this.btnLectii.Text = "Lectii si teste";
+            this.btnLectii.Text = "Lecții și teste";
             this.btnLectii.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLectii.UseVisualStyleBackColor = true;
             this.btnLectii.Click += new System.EventHandler(this.btnLectii_Click);
@@ -157,7 +175,7 @@
             this.btnCalculatorCarbon.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnCalculatorCarbon.Size = new System.Drawing.Size(280, 35);
             this.btnCalculatorCarbon.TabIndex = 6;
-            this.btnCalculatorCarbon.Text = "Calculator amprenta carbon";
+            this.btnCalculatorCarbon.Text = "Calculator amprentă carbon";
             this.btnCalculatorCarbon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCalculatorCarbon.UseVisualStyleBackColor = true;
             this.btnCalculatorCarbon.Click += new System.EventHandler(this.btnCalculatorCarbon_Click);
@@ -189,7 +207,7 @@
             this.btnIesire.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnIesire.Size = new System.Drawing.Size(280, 32);
             this.btnIesire.TabIndex = 4;
-            this.btnIesire.Text = "Iesire";
+            this.btnIesire.Text = "Ieșire";
             this.btnIesire.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIesire.UseVisualStyleBackColor = true;
             this.btnIesire.Click += new System.EventHandler(this.btnIesire_Click);
@@ -204,7 +222,7 @@
             this.btnDelogare.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnDelogare.Size = new System.Drawing.Size(280, 32);
             this.btnDelogare.TabIndex = 3;
-            this.btnDelogare.Text = "Delogheaza-te";
+            this.btnDelogare.Text = "Deloghează-te";
             this.btnDelogare.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelogare.UseVisualStyleBackColor = true;
             this.btnDelogare.Click += new System.EventHandler(this.btnDelogare_Click);
@@ -220,6 +238,24 @@
             this.panelTitlu.Name = "panelTitlu";
             this.panelTitlu.Size = new System.Drawing.Size(1280, 81);
             this.panelTitlu.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(112)))), ((int)(((byte)(63)))));
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(9, 12);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(56, 53);
+            this.button1.TabIndex = 12;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblTitlu
             // 
@@ -242,24 +278,6 @@
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(1000, 600);
             this.panelCentral.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(112)))), ((int)(((byte)(63)))));
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(9, 12);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(56, 53);
-            this.button1.TabIndex = 12;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -301,6 +319,7 @@
         private System.Windows.Forms.Button btnCalculatorCarbon;
         private System.Windows.Forms.Button btnCulori;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAchievements;
     }
 }
 

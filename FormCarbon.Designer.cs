@@ -41,7 +41,7 @@
             // 
             // txtElectricity
             // 
-            this.txtElectricity.Location = new System.Drawing.Point(459, 98);
+            this.txtElectricity.Location = new System.Drawing.Point(470, 150);
             this.txtElectricity.Name = "txtElectricity";
             this.txtElectricity.Size = new System.Drawing.Size(397, 27);
             this.txtElectricity.TabIndex = 0;
@@ -50,24 +50,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(79, 101);
+            this.label1.Location = new System.Drawing.Point(90, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 19);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Consum energie electrica (kWh/luna)";
+            this.label1.Text = "Consum energie electrică (kWh/lună)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 164);
+            this.label2.Location = new System.Drawing.Point(90, 216);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(354, 19);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Consum gaz natural (kWh/luna sau m³/luna)";
+            this.label2.Text = "Consum gaz natural (kWh/lună sau m³/lună)";
             // 
             // txtGas
             // 
-            this.txtGas.Location = new System.Drawing.Point(459, 161);
+            this.txtGas.Location = new System.Drawing.Point(470, 213);
             this.txtGas.Name = "txtGas";
             this.txtGas.Size = new System.Drawing.Size(397, 27);
             this.txtGas.TabIndex = 2;
@@ -76,15 +76,15 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 228);
+            this.label3.Location = new System.Drawing.Point(90, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 19);
+            this.label3.Size = new System.Drawing.Size(295, 19);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Kilometri parcursi cu masina pe luna";
+            this.label3.Text = "Kilometri parcurși cu masina pe lună";
             // 
             // txtCar
             // 
-            this.txtCar.Location = new System.Drawing.Point(459, 225);
+            this.txtCar.Location = new System.Drawing.Point(470, 277);
             this.txtCar.Name = "txtCar";
             this.txtCar.Size = new System.Drawing.Size(397, 27);
             this.txtCar.TabIndex = 4;
@@ -93,7 +93,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 362);
+            this.label4.Location = new System.Drawing.Point(90, 414);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 19);
             this.label4.TabIndex = 6;
@@ -102,14 +102,14 @@
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(167, 362);
+            this.lblResult.Location = new System.Drawing.Point(178, 414);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(0, 19);
             this.lblResult.TabIndex = 7;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(536, 281);
+            this.btnCalculate.Location = new System.Drawing.Point(547, 333);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(255, 50);
             this.btnCalculate.TabIndex = 8;

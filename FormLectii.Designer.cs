@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.panelNavigare = new System.Windows.Forms.Panel();
+            this.btnLectii = new System.Windows.Forms.Button();
             this.panelCapitol2 = new System.Windows.Forms.Panel();
+            this.progressBarCap2 = new System.Windows.Forms.ProgressBar();
             this.btnLectia4Cap2 = new System.Windows.Forms.Button();
             this.btnLectia3Cap2 = new System.Windows.Forms.Button();
             this.btnLectia2Cap2 = new System.Windows.Forms.Button();
             this.btnLectia1Cap2 = new System.Windows.Forms.Button();
             this.btnCapitol2 = new System.Windows.Forms.Button();
             this.panelCapitol1 = new System.Windows.Forms.Panel();
+            this.progressBarCap1 = new System.Windows.Forms.ProgressBar();
             this.btnLectia4Cap1 = new System.Windows.Forms.Button();
             this.btnLectia3Cap1 = new System.Windows.Forms.Button();
             this.btnLectia2Cap1 = new System.Windows.Forms.Button();
@@ -43,8 +46,6 @@
             this.btnCapitol1 = new System.Windows.Forms.Button();
             this.panleCentral = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.progressBarCap1 = new System.Windows.Forms.ProgressBar();
-            this.progressBarCap2 = new System.Windows.Forms.ProgressBar();
             this.panelNavigare.SuspendLayout();
             this.panelCapitol2.SuspendLayout();
             this.panelCapitol1.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // panelNavigare
             // 
+            this.panelNavigare.Controls.Add(this.btnLectii);
             this.panelNavigare.Controls.Add(this.panelCapitol2);
             this.panelNavigare.Controls.Add(this.panelCapitol1);
             this.panelNavigare.Dock = System.Windows.Forms.DockStyle.Left;
@@ -63,6 +65,22 @@
             this.panelNavigare.Size = new System.Drawing.Size(312, 681);
             this.panelNavigare.TabIndex = 0;
             // 
+            // btnLectii
+            // 
+            this.btnLectii.FlatAppearance.BorderSize = 0;
+            this.btnLectii.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.btnLectii.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLectii.ForeColor = System.Drawing.Color.Black;
+            this.btnLectii.Location = new System.Drawing.Point(12, 634);
+            this.btnLectii.Name = "btnLectii";
+            this.btnLectii.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnLectii.Size = new System.Drawing.Size(293, 35);
+            this.btnLectii.TabIndex = 12;
+            this.btnLectii.Text = "Ieșire";
+            this.btnLectii.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLectii.UseVisualStyleBackColor = true;
+            this.btnLectii.Click += new System.EventHandler(this.btnLectii_Click);
+            // 
             // panelCapitol2
             // 
             this.panelCapitol2.Controls.Add(this.progressBarCap2);
@@ -72,10 +90,19 @@
             this.panelCapitol2.Controls.Add(this.btnLectia1Cap2);
             this.panelCapitol2.Controls.Add(this.btnCapitol2);
             this.panelCapitol2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCapitol2.Location = new System.Drawing.Point(0, 200);
+            this.panelCapitol2.Location = new System.Drawing.Point(0, 40);
             this.panelCapitol2.Name = "panelCapitol2";
-            this.panelCapitol2.Size = new System.Drawing.Size(312, 200);
+            this.panelCapitol2.Size = new System.Drawing.Size(312, 40);
             this.panelCapitol2.TabIndex = 11;
+            // 
+            // progressBarCap2
+            // 
+            this.progressBarCap2.Location = new System.Drawing.Point(164, 14);
+            this.progressBarCap2.Name = "progressBarCap2";
+            this.progressBarCap2.Size = new System.Drawing.Size(100, 10);
+            this.progressBarCap2.Step = 25;
+            this.progressBarCap2.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBarCap2.TabIndex = 12;
             // 
             // btnLectia4Cap2
             // 
@@ -168,8 +195,17 @@
             this.panelCapitol1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCapitol1.Location = new System.Drawing.Point(0, 0);
             this.panelCapitol1.Name = "panelCapitol1";
-            this.panelCapitol1.Size = new System.Drawing.Size(312, 200);
+            this.panelCapitol1.Size = new System.Drawing.Size(312, 40);
             this.panelCapitol1.TabIndex = 0;
+            // 
+            // progressBarCap1
+            // 
+            this.progressBarCap1.Location = new System.Drawing.Point(164, 12);
+            this.progressBarCap1.Name = "progressBarCap1";
+            this.progressBarCap1.Size = new System.Drawing.Size(100, 10);
+            this.progressBarCap1.Step = 25;
+            this.progressBarCap1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBarCap1.TabIndex = 11;
             // 
             // btnLectia4Cap1
             // 
@@ -263,30 +299,13 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold);
-            this.richTextBox1.Location = new System.Drawing.Point(7, 12);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(933, 657);
+            this.richTextBox1.Size = new System.Drawing.Size(952, 681);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
-            // 
-            // progressBarCap1
-            // 
-            this.progressBarCap1.Location = new System.Drawing.Point(164, 12);
-            this.progressBarCap1.Name = "progressBarCap1";
-            this.progressBarCap1.Size = new System.Drawing.Size(100, 10);
-            this.progressBarCap1.Step = 25;
-            this.progressBarCap1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBarCap1.TabIndex = 11;
-            // 
-            // progressBarCap2
-            // 
-            this.progressBarCap2.Location = new System.Drawing.Point(164, 14);
-            this.progressBarCap2.Name = "progressBarCap2";
-            this.progressBarCap2.Size = new System.Drawing.Size(100, 10);
-            this.progressBarCap2.Step = 25;
-            this.progressBarCap2.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBarCap2.TabIndex = 12;
             // 
             // FormLectii
             // 
@@ -300,6 +319,7 @@
             this.Name = "FormLectii";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLectii";
+            this.Load += new System.EventHandler(this.FormLectii_Load);
             this.panelNavigare.ResumeLayout(false);
             this.panelCapitol2.ResumeLayout(false);
             this.panelCapitol1.ResumeLayout(false);
@@ -327,5 +347,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ProgressBar progressBarCap2;
         private System.Windows.Forms.ProgressBar progressBarCap1;
+        private System.Windows.Forms.Button btnLectii;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mysqlx;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,13 +46,14 @@ namespace GoGreen
             ComutaCapitol(panelCapitol2);
         }
 
+        bool ok = true;
         private void btn_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             capitol = int.Parse(button.Name[button.Name.Length - 1].ToString());
             lectie = int.Parse(button.Name[button.Name.Length - 5].ToString());
 
-            if(capitol == 1)
+            if (capitol == 1)
             {
                 if (Cap1[lectie] == false)
                 {
@@ -59,7 +61,7 @@ namespace GoGreen
                     progressBarCap1.Value += 25;
                 }
             }
-            else if(capitol == 2)
+            else if (capitol == 2)
             {
                 if (Cap2[lectie] == false)
                 {
@@ -69,11 +71,51 @@ namespace GoGreen
             }
 
             LoadIntoTextBox();
+
+            if (progressBarCap1.Value == 100 && progressBarCap2.Value == 100 && ok)
+            {
+                ok = !ok;
+                if (Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteLectii < 10)
+                {
+                    Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteLectii += 10;
+                    MessageBox.Show("Felicitări! Ai terminat toate lecțiile, ai castigat 10 puncte!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Ai atins deja punctajul maxim pentru amprenta de carbon.", "Informație", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                Achievements.UpdateInBazaDeDate();
+            }
+
+
+        }
+
+        private void btnLectii_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FormLectii_Load(object sender, EventArgs e)
+        {
+            AplicaTemeCulori();
+            Culori.CuloriSchimbate += Culori_CuloriSchimbate;
+        }
+        private void AplicaTemeCulori()
+        {
+            this.BackColor = Culori.Backgroundcolor;
+            foreach (Control c in this.Controls)
+            {
+                c.ForeColor = Culori.TextColor;
+            }
+        }
+        private void Culori_CuloriSchimbate(object sender, EventArgs e)
+        {
+            AplicaTemeCulori();
         }
 
         private void LoadIntoTextBox()
         {
-            string text = "";
             using (MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection("Server=localhost;Database=database;Uid=root;Pwd=;"))
             {
                 conn.Open();
@@ -87,10 +129,14 @@ namespace GoGreen
                         if (reader.Read())
                         {
                             string textBrut = reader["Text"].ToString();
-                            richTextBox1.Text = textBrut.Replace("\r", "").Replace("\n", Environment.NewLine + Environment.NewLine);
+
+                            richTextBox1.Rtf = textBrut;
                         }
+
                     }
+
                 }
+
             }
         }
     }

@@ -76,6 +76,19 @@ namespace GoGreen
             try
             {
                 ActualizeazaVremeaAsync(orasSelectat);
+
+                if (Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteMeteo < 15)
+                {
+                    Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteMeteo += 5;
+                    MessageBox.Show("Felicitări! Ai câștigat 5 puncte pentru meteo!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Ai atins deja punctajul maxim pentru meteo.", "Informație", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                Achievements.UpdateInBazaDeDate();
             }
             catch (Exception ex)
             {

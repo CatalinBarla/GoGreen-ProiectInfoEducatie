@@ -219,12 +219,25 @@ namespace GoGreen
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "PNG Image|*.png|JPEG Image|*.jpg|Bitmap Image|*.bmp";
+
             DialogResult result = sfd.ShowDialog();
             if(result == DialogResult.OK)
             {
                 string filePath = sfd.FileName;
                 pbAfis.Image.Save(filePath);
             }
+
+            if (Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PunctePoster < 20)
+            {
+                Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PunctePoster += 10;
+                MessageBox.Show("Felicitări! Ai câștigat 10 puncte pentru salvarea Posterului!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Ai atins deja punctajul maxim pentru postere.", "Informație", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            Achievements.UpdateInBazaDeDate();
         }
     }
 }

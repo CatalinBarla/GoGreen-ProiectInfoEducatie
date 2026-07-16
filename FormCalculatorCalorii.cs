@@ -27,12 +27,8 @@ namespace GoGreen
                 string gen = cbGen.SelectedItem.ToString();
                 int varsta = Convert.ToInt32(txtVarsta.Text);
                 string nivel_a = cbActivitate.SelectedItem.ToString();
-                string nivel;
                 double BMR = 0, BMRFIN = 0;
-                double activitate;
 
-                int i;
-                int ok = 0;
 
                 int index = nivel_a.IndexOf(':');
                 if (index != -1)
@@ -67,6 +63,19 @@ namespace GoGreen
 
                 BMRFIN = (int)Math.Round(BMRFIN);
                 lblRezultat.Text = text + BMRFIN.ToString();
+
+                if (Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteKcal < 15)
+                {
+                    Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteKcal += 5;
+                    MessageBox.Show("Felicitări! Ai câștigat 5 puncte pentru calculul caloriilor!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Ai atins deja punctajul maxim pentru calculatorul de kcal.", "Informație", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                Achievements.UpdateInBazaDeDate();
             }
             else
             {
@@ -99,7 +108,7 @@ namespace GoGreen
         }
         private void AplicaTemeCulori()
         {
-            pnlFereastra.BackColor = Culori.Backgroundcolor;
+            this.BackColor = Culori.Backgroundcolor;
             foreach (Control c in this.Controls)
             {
                 c.ForeColor = Culori.TextColor;

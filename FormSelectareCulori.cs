@@ -33,6 +33,19 @@ namespace GoGreen
                 Culori.Backgroundcolor = colorDialog.Color;
                 pbBackground.BackColor = Culori.Backgroundcolor;
                 Culori.NotificaSchimbare();
+
+                if (Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteCulori < 15)
+                {
+                    Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteCulori += 5;
+                    MessageBox.Show("Ai câștigat 5 puncte pentru personalizarea culorilor!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Ai atins deja punctajul maxim pentru culori.", "Informație", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                Achievements.UpdateInBazaDeDate();
             }
         }
 

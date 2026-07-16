@@ -93,7 +93,7 @@
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(608, 39);
             this.btnSignUp.TabIndex = 6;
-            this.btnSignUp.Text = "Creeaza cont";
+            this.btnSignUp.Text = "Creează cont";
             this.btnSignUp.UseVisualStyleBackColor = true;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 

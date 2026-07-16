@@ -61,7 +61,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 19);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Selecteaza localitatea:";
+            this.label1.Text = "Selectează localitatea:";
             // 
             // lblOras
             // 
@@ -134,7 +134,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 25);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Temperatura";
+            this.label4.Text = "Temperatură";
             // 
             // label5
             // 
@@ -143,9 +143,9 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(68, 120);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 25);
+            this.label5.Size = new System.Drawing.Size(63, 25);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Oras";
+            this.label5.Text = "Oraș";
             // 
             // wbHarta
             // 
@@ -163,7 +163,7 @@
             this.btniesire.Name = "btniesire";
             this.btniesire.Size = new System.Drawing.Size(370, 33);
             this.btniesire.TabIndex = 11;
-            this.btniesire.Text = "Iesire";
+            this.btniesire.Text = "Ieșire";
             this.btniesire.UseVisualStyleBackColor = false;
             this.btniesire.Click += new System.EventHandler(this.btniesire_Click);
             // 

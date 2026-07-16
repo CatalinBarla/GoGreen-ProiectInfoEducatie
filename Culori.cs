@@ -9,7 +9,9 @@ namespace GoGreen
 {
     internal class Culori
     {
-        public static Color Backgroundcolor = Color.FromArgb(200, 240, 200);
+        public static Color DefaultColor = Color.FromArgb(200, 240, 200);
+
+        public static Color Backgroundcolor = DefaultColor;
         public static Color TextColor = Color.Black;
 
         public static event EventHandler CuloriSchimbate;
