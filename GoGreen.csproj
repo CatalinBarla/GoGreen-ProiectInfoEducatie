@@ -297,6 +297,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="res\Imagini\diploma.psd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="res\Imagini\golden-framed labels\is_oli_2013_c09_moretime.pdf" />
+    <None Include="res\Imagini\golden-framed labels\problema_2_-_moretime.doc" />
+    <None Include="res\Imagini\ICons_HM\ICons_HM.rar" />
+    <None Include="res\Imagini\ICons_HM\profil_gol.psd" />
+    <None Include="res\media\magazin bijuterii aur in bucuresti accent bijuterii_1763463442 %281%29.webp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -312,6 +320,314 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\Harta1.txt" />
+    <Content Include="res\Harta2.txt" />
+    <Content Include="res\Harta3.txt" />
+    <Content Include="res\ImaginiCreate\berze.png" />
+    <Content Include="res\ImaginiCreate\Imagine_GoGreen.png" />
+    <Content Include="res\Imagini\500px-Romania_location_map.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Afise\Afisu.png" />
+    <Content Include="res\Imagini\Afise\Afisud.png" />
+    <Content Include="res\Imagini\Afise\PrimulAfis.png" />
+    <Content Include="res\Imagini\andrei.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\CalculatorCarbon-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\CalculatorCarbon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\CalculatorKcal-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\CalculatorKcal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\catalin.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\corect.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Culori-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Culori.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\default.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\diploma_f_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\diploma_f_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\diploma_f_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\diploma_m_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\diploma_m_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\diploma_m_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Diplome\cute-lion-cartoon-blank-sign-illustration-31132090.jpg" />
+    <Content Include="res\Imagini\Diplome\funny-lion-cartoon-blank-sign-25130575.jpg" />
+    <Content Include="res\Imagini\Diplome\lion-cartoon-vector-432513.jpg" />
+    <Content Include="res\Imagini\fundalnor.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\golden-framed labels\background-golden-bow-27679487.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\collection-golden-luxury-labels-11164001.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\collection-golden-ornate-labels-11164012.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\curly-golden-banners-set-20626590.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\depositphotos_6325426-Set-of-gold-framed-labels.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\framed-golden-luxury-banners-11164045.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\gold-framed-labels-13138999.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\gold-framed-labels-13411711.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\gold-framed-labels-15728149.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\gold-framed-labels-parts-16801589.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\gold-framed-wine-labels-14245744.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\golden-framed-labels-decor-19961339.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\golden-labels-collection-11806195.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\labels-golden-banners-20626544.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\luxury-usa-labels-10633579.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\set-best-choice-golden-labels-11465978.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\set-gold-framed-labels-17544134 %281%29.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\set-gold-framed-labels-17544134.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\set-leather-vintage-framed-labels-24185640.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\vector-collection-luxury-golden-labels-11655404.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\vector-set-gold-framed-labels-11681179.jpg" />
+    <Content Include="res\Imagini\golden-framed labels\vintage-golden-green-luxury-ornate-framed-labels-18638258.jpg" />
+    <Content Include="res\Imagini\gresit.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\ICons_HM\accept.png" />
+    <Content Include="res\Imagini\ICons_HM\back.png" />
+    <Content Include="res\Imagini\ICons_HM\b_drop.png" />
+    <Content Include="res\Imagini\ICons_HM\b_edit.png" />
+    <Content Include="res\Imagini\ICons_HM\b_tblops.png" />
+    <Content Include="res\Imagini\ICons_HM\chat.png" />
+    <Content Include="res\Imagini\ICons_HM\done.png" />
+    <Content Include="res\Imagini\ICons_HM\facebook.png" />
+    <Content Include="res\Imagini\ICons_HM\globe_info.png" />
+    <Content Include="res\Imagini\ICons_HM\google.png" />
+    <Content Include="res\Imagini\ICons_HM\help.png" />
+    <Content Include="res\Imagini\ICons_HM\history.png" />
+    <Content Include="res\Imagini\ICons_HM\images.png" />
+    <Content Include="res\Imagini\ICons_HM\info.png" />
+    <Content Include="res\Imagini\ICons_HM\ko.png" />
+    <Content Include="res\Imagini\ICons_HM\linkedin.png" />
+    <Content Include="res\Imagini\ICons_HM\next.png" />
+    <Content Include="res\Imagini\ICons_HM\nopic.png" />
+    <Content Include="res\Imagini\ICons_HM\nopicture_man.png" />
+    <Content Include="res\Imagini\ICons_HM\ok.png" />
+    <Content Include="res\Imagini\ICons_HM\pinterest.png" />
+    <Content Include="res\Imagini\ICons_HM\process_delete.png" />
+    <Content Include="res\Imagini\ICons_HM\profile_man.png" />
+    <Content Include="res\Imagini\ICons_HM\profile_woman.png" />
+    <Content Include="res\Imagini\ICons_HM\profil_gol.png" />
+    <Content Include="res\Imagini\ICons_HM\save.png" />
+    <Content Include="res\Imagini\ICons_HM\search_add.png" />
+    <Content Include="res\Imagini\ICons_HM\seeonmap.png" />
+    <Content Include="res\Imagini\ICons_HM\stumbleupon.png" />
+    <Content Include="res\Imagini\ICons_HM\s_process.png" />
+    <Content Include="res\Imagini\ICons_HM\twitter.png" />
+    <Content Include="res\Imagini\imgAlba.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Lectii-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Lectii.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Meteo-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Meteo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Poster-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Poster.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Romania_location_map.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Verde1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Verde2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Imagini\Verde3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\imgJoc\acvila mare.jpg" />
+    <Content Include="res\imgJoc\acvilademunte.jpg" />
+    <Content Include="res\imgJoc\barza.jpg" />
+    <Content Include="res\imgJoc\buhai.jpg" />
+    <Content Include="res\imgJoc\ciocintors.jpg" />
+    <Content Include="res\imgJoc\ciuful pitic.jpg" />
+    <Content Include="res\imgJoc\codobag.jpg" />
+    <Content Include="res\imgJoc\codrosmunte.jpg" />
+    <Content Include="res\imgJoc\codrospadure.jpg" />
+    <Content Include="res\imgJoc\cufundarcalb.jpg" />
+    <Content Include="res\imgJoc\cufundarpolar.jpg" />
+    <Content Include="res\imgJoc\egretamica.jpg" />
+    <Content Include="res\imgJoc\fluierarprosii.jpg" />
+    <Content Include="res\imgJoc\lebada de iarna.jpg" />
+    <Content Include="res\imgJoc\lebadadevara.jpg" />
+    <Content Include="res\MaterialeReciclabile\Hartie.png" />
+    <Content Include="res\MaterialeReciclabile\Plastic.png" />
+    <Content Include="res\MaterialeReciclabile\Sticla.png" />
+    <Content Include="res\media\250px-VanellusVanellusIUCN.png" />
+    <Content Include="res\media\4f78fcf3-13b9-44ad-bcc4-ba793694ecce.jpg" />
+    <Content Include="res\media\ActitisHypoleucosIUCNver2018_2.png" />
+    <Content Include="res\media\acvila mare.jpg" />
+    <Content Include="res\media\AcvilaDeMunte.jpg" />
+    <Content Include="res\media\aer.jpg" />
+    <Content Include="res\media\ajutor.jpg" />
+    <Content Include="res\media\ala micu.jpg" />
+    <Content Include="res\media\barza.jpg" />
+    <Content Include="res\media\beca.png" />
+    <Content Include="res\media\BluesBun.jpg" />
+    <Content Include="res\media\BluesSadToons.jpg" />
+    <Content Include="res\media\bossman2.jpg" />
+    <Content Include="res\media\Buha.jpg" />
+    <Content Include="res\media\Buhai.jpg" />
+    <Content Include="res\media\cali.jpg" />
+    <Content Include="res\media\cali2.jpg" />
+    <Content Include="res\media\calialb.jpg" />
+    <Content Include="res\media\caliharta.png" />
+    <Content Include="res\media\caliOua.jpg" />
+    <Content Include="res\media\caliRisc.png" />
+    <Content Include="res\media\cerbg.jpg" />
+    <Content Include="res\media\ciocIntors.jpg" />
+    <Content Include="res\media\CircaeutusGallicusIUCN2019-2.png" />
+    <Content Include="res\media\Circus_cyaneus_distribution_map.png" />
+    <Content Include="res\media\ciuful pitic.jpg" />
+    <Content Include="res\media\coco.jpg" />
+    <Content Include="res\media\Cocosar.jpg" />
+    <Content Include="res\media\codobaG.JPG" />
+    <Content Include="res\media\CodrosMunte.jpg" />
+    <Content Include="res\media\CodrosPadure.jpg" />
+    <Content Include="res\media\Common_sandpiper_lake_geneva-4.jpg" />
+    <Content Include="res\media\copac.jpg" />
+    <Content Include="res\media\cufundar2.jpg" />
+    <Content Include="res\media\CufundarCAlb.jpg" />
+    <Content Include="res\media\cufundarPolar.jpg" />
+    <Content Include="res\media\Egreta-mica-la-rasarit_web %281%29.jpg" />
+    <Content Include="res\media\egretaMica.jpg" />
+    <Content Include="res\media\erete.jpg" />
+    <Content Include="res\media\ereteVanat.jpg" />
+    <Content Include="res\media\evil eye.jpg" />
+    <Content Include="res\media\Falco_columbarius_distribution_map.png" />
+    <Content Include="res\media\fdlIarba.jpg" />
+    <Content Include="res\media\FluierarDeZavoi.jpg" />
+    <Content Include="res\media\fluierarMunte.jpg" />
+    <Content Include="res\media\FluierarPRosii.jpg" />
+    <Content Include="res\media\FluierDM.jpg" />
+    <Content Include="res\media\FluierMOua.jpg" />
+    <Content Include="res\media\fugaci.jpg" />
+    <Content Include="res\media\Fugaci2.JPG" />
+    <Content Include="res\media\grass.png" />
+    <Content Include="res\media\harta ciufu.png" />
+    <Content Include="res\media\HartaFugaci.png" />
+    <Content Include="res\media\Hartapiciorong.png" />
+    <Content Include="res\media\HoitarAlb.jpg" />
+    <Content Include="res\media\ibg1.png" />
+    <Content Include="res\media\ibg2.png" />
+    <Content Include="res\media\lebada de iarna.jpg" />
+    <Content Include="res\media\lebadaDeIarna.jpg" />
+    <Content Include="res\media\lebadaDeVara.jpg" />
+    <Content Include="res\media\LebadaIarnaHarta.png" />
+    <Content Include="res\media\lebadaMica.jpg" />
+    <Content Include="res\media\lopatar.jpg" />
+    <Content Include="res\media\Matasar.jpg" />
+    <Content Include="res\media\Melanitta.jpg" />
+    <Content Include="res\media\MierlaGulerata.jpg" />
+    <Content Include="res\media\nagatz.jpg" />
+    <Content Include="res\media\nopic.png" />
+    <Content Include="res\media\nugget.jpg" />
+    <Content Include="res\media\papura.jpg" />
+    <Content Include="res\media\PescaritaMare.jpg" />
+    <Content Include="res\media\PescarusNegricios.jpg" />
+    <Content Include="res\media\PescarusPGalbene.jpg" />
+    <Content Include="res\media\Piciorong.jpg" />
+    <Content Include="res\media\piciorong2.jpg" />
+    <Content Include="res\media\PloierAuriu.jpg" />
+    <Content Include="res\media\prigorie.jpg" />
+    <Content Include="res\media\prundarasGulerat.jpg" />
+    <Content Include="res\media\PrundarasNamol.jpg" />
+    <Content Include="res\media\prundSaratura.jpg" />
+    <Content Include="res\media\pupaza.jpg" />
+    <Content Include="res\media\Randunica.JPG" />
+    <Content Include="res\media\RataCaraitoare.jpg" />
+    <Content Include="res\media\Ratacatifelata.jpg" />
+    <Content Include="res\media\RcaliHarta.png" />
+    <Content Include="res\media\Scoicar.jpg" />
+    <Content Include="res\media\serpar.jpg" />
+    <Content Include="res\media\serpicus.jpg" />
+    <Content Include="res\media\Sitarul de mal.jpg" />
+    <Content Include="res\media\soggycat.jpg" />
+    <Content Include="res\media\soim de iarna.jpg" />
+    <Content Include="res\media\SoimCalator.jpg" />
+    <Content Include="res\media\SoimDeVana.jpg" />
+    <Content Include="res\media\SoimDieIarna.jpg" />
+    <Content Include="res\media\SoimDunarean.jpg" />
+    <Content Include="res\media\sorecar incaltat.jpg" />
+    <Content Include="res\media\SorecarMare.jpg" />
+    <Content Include="res\media\Sparcaci.jpg" />
+    <Content Include="res\media\splitt.png" />
+    <Content Include="res\media\StarcCenusiu.jpg" />
+    <Content Include="res\media\steagAU.png" />
+    <Content Include="res\media\steagBR.png" />
+    <Content Include="res\media\steagGB.png" />
+    <Content Include="res\media\steagGE.png" />
+    <Content Include="res\media\steagIN.jpg" />
+    <Content Include="res\media\steagRU.png" />
+    <Content Include="res\media\steagSW.png" />
+    <Content Include="res\media\steagUS.png" />
+    <Content Include="res\media\SturzulViilor.jpg" />
+    <Content Include="res\media\Tiganus.jpg" />
+    <Content Include="res\media\transparentus.png" />
+    <Content Include="res\media\turturica.jpg" />
+    <Content Include="res\media\UliganPescar.jpg" />
+    <Content Include="res\media\VanturelMic.jpg" />
+    <Content Include="res\media\VanturelRosu.jpg" />
+    <Content Include="res\media\VanturelSeara.jpg" />
+    <Content Include="res\media\whoisthat.jpg" />
+    <Content Include="res\media\Zagan.jpg" />
+    <Content Include="res\Meduze\Meduza1.png" />
+    <Content Include="res\Meduze\Meduza2.png" />
+    <Content Include="res\Meduze\Meduza3.png" />
+    <Content Include="res\Meduze\Meduza4.png" />
+    <Content Include="res\Robot\Robot.png" />
+    <Content Include="res\Wood\Wood1.jpg" />
+    <Content Include="res\Wood\Wood2.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />

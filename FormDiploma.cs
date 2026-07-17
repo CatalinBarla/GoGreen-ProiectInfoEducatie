@@ -33,14 +33,15 @@ namespace GoGreen
             AplicaTemeCulori();
             Culori.CuloriSchimbate += Culori_CuloriSchimbate;
 
-            if(Utilizatori.gen == "F")
+            if (Utilizatori.gen == "F")
             {
-                pictureBox1.Image = Image.FromFile(System.IO.Path.Combine(Application.StartupPath, "res/Imagini/diploma_f_1.png"));
+                pictureBox1.Image = Image.FromFile(System.IO.Path.Combine(Application.StartupPath, "res", "Imagini", "diploma_f_1.png"));
             }
             else if (Utilizatori.gen == "M")
             {
-                pictureBox1.Image = Image.FromFile(System.IO.Path.Combine(Application.StartupPath, "res/Imagini/diploma_m_1.png"));
+                pictureBox1.Image = Image.FromFile(System.IO.Path.Combine(Application.StartupPath, "res", "Imagini", "diploma_m_1.png"));
             }
+
         }
 
         private void AplicaTemeCulori()
