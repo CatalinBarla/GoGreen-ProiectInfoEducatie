@@ -278,5 +278,10 @@ namespace GoGreen
             pnlAlegere.Visible = true;
             pnlAlegere.BringToFront();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

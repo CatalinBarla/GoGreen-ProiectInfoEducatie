@@ -199,5 +199,13 @@ namespace GoGreen
             FormAchievements op = new FormAchievements();
             op.ShowDialog();
         }
+
+        private void btnIntreabama_Click(object sender, EventArgs e)
+        {
+            if(Utilizatori.utilizatorlogat != null)
+            {
+                IncarcaFormularInPanel(new FormIntreaba_ma());
+            }
+        }
     }
 }

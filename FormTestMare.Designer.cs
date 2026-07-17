@@ -42,17 +42,19 @@
             this.rbVariantaB = new System.Windows.Forms.RadioButton();
             this.rbVariantaA = new System.Windows.Forms.RadioButton();
             this.lblEnunt = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlAlegere.SuspendLayout();
             this.pnlZonaTest.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAlegere
             // 
+            this.pnlAlegere.Controls.Add(this.button1);
             this.pnlAlegere.Controls.Add(this.btnPornesteTest);
             this.pnlAlegere.Controls.Add(this.chkCap2);
             this.pnlAlegere.Controls.Add(this.label1);
             this.pnlAlegere.Controls.Add(this.chkCap1);
-            this.pnlAlegere.Location = new System.Drawing.Point(1219, 653);
+            this.pnlAlegere.Location = new System.Drawing.Point(13, 557);
             this.pnlAlegere.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAlegere.Name = "pnlAlegere";
             this.pnlAlegere.Size = new System.Drawing.Size(886, 330);
@@ -114,7 +116,7 @@
             this.pnlZonaTest.Controls.Add(this.rbVariantaB);
             this.pnlZonaTest.Controls.Add(this.rbVariantaA);
             this.pnlZonaTest.Controls.Add(this.lblEnunt);
-            this.pnlZonaTest.Location = new System.Drawing.Point(104, 87);
+            this.pnlZonaTest.Location = new System.Drawing.Point(102, 88);
             this.pnlZonaTest.Name = "pnlZonaTest";
             this.pnlZonaTest.Size = new System.Drawing.Size(1013, 462);
             this.pnlZonaTest.TabIndex = 1;
@@ -201,6 +203,16 @@
             this.lblEnunt.TabIndex = 0;
             this.lblEnunt.Text = "label2";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(741, 281);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 34);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Iesire";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormTestMare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -209,8 +221,10 @@
             this.Controls.Add(this.pnlZonaTest);
             this.Controls.Add(this.pnlAlegere);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTestMare";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTeste";
             this.Load += new System.EventHandler(this.FormTeste_Load);
             this.pnlAlegere.ResumeLayout(false);
@@ -237,5 +251,6 @@
         private System.Windows.Forms.Button btnInainte;
         private System.Windows.Forms.Button btnValideaza;
         private System.Windows.Forms.Button btnInapoi;
+        private System.Windows.Forms.Button button1;
     }
 }

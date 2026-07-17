@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblTitlu = new System.Windows.Forms.Label();
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.btnIntreabama = new System.Windows.Forms.Button();
             this.panelNavigare.SuspendLayout();
             this.panelTitlu.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             // panelNavigare
             // 
             this.panelNavigare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(84)))), ((int)(((byte)(46)))));
+            this.panelNavigare.Controls.Add(this.btnIntreabama);
             this.panelNavigare.Controls.Add(this.btnAchievements);
             this.panelNavigare.Controls.Add(this.btnCulori);
             this.panelNavigare.Controls.Add(this.btnMeteo);
@@ -79,7 +81,7 @@
             this.btnAchievements.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnAchievements.Size = new System.Drawing.Size(280, 35);
             this.btnAchievements.TabIndex = 12;
-            this.btnAchievements.Text = "Achievementuri";
+            this.btnAchievements.Text = "Trofeele tale";
             this.btnAchievements.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAchievements.UseVisualStyleBackColor = true;
             this.btnAchievements.Click += new System.EventHandler(this.btnAchievements_Click);
@@ -279,6 +281,22 @@
             this.panelCentral.Size = new System.Drawing.Size(1000, 600);
             this.panelCentral.TabIndex = 2;
             // 
+            // btnIntreabama
+            // 
+            this.btnIntreabama.FlatAppearance.BorderSize = 0;
+            this.btnIntreabama.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.btnIntreabama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIntreabama.ForeColor = System.Drawing.Color.White;
+            this.btnIntreabama.Location = new System.Drawing.Point(0, 367);
+            this.btnIntreabama.Name = "btnIntreabama";
+            this.btnIntreabama.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnIntreabama.Size = new System.Drawing.Size(280, 35);
+            this.btnIntreabama.TabIndex = 13;
+            this.btnIntreabama.Text = "Intreaba-ma";
+            this.btnIntreabama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIntreabama.UseVisualStyleBackColor = true;
+            this.btnIntreabama.Click += new System.EventHandler(this.btnIntreabama_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -320,6 +338,7 @@
         private System.Windows.Forms.Button btnCulori;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAchievements;
+        private System.Windows.Forms.Button btnIntreabama;
     }
 }
 

@@ -123,6 +123,12 @@ namespace GoGreen
                 c.ForeColor = Culori.TextColor;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void Culori_CuloriSchimbate(object sender, EventArgs e)
         {
             AplicaTemeCulori();
