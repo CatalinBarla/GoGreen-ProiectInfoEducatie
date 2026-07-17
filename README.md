@@ -1,6 +1,6 @@
 # GoGreen
-Documentație Proiect – GoGreen
 Date generale
+
 GoGreen este o aplicație educațională dezvoltată pentru a crește gradul de conștientizare privind impactul activităților umane asupra mediului. Prin intermediul unor instrumente interactive și al unor lecții tematice, aplicația îi ajută pe utilizatori să înțeleagă modul în care emisiile de carbon influențează ecosistemele, în special fauna marină și speciile de păsări.
 
 Întregul proiect a fost realizat în Microsoft Visual Studio, utilizând limbajul de programare C#. Obiectivul principal este educarea tinerilor și încurajarea adoptării unui comportament responsabil față de natură și resursele planetei.
