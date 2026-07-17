@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelNavigare = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnTestMare = new System.Windows.Forms.Button();
             this.panelCapitol2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,7 +48,6 @@
             this.btnCapitol1 = new System.Windows.Forms.Button();
             this.panleCentral = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelNavigare.SuspendLayout();
             this.panelCapitol2.SuspendLayout();
             this.panelCapitol1.SuspendLayout();
@@ -68,9 +68,19 @@
             this.panelNavigare.Size = new System.Drawing.Size(315, 681);
             this.panelNavigare.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 627);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(300, 42);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Ieșire";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnTestMare
             // 
-            this.btnTestMare.Location = new System.Drawing.Point(12, 577);
+            this.btnTestMare.Location = new System.Drawing.Point(12, 579);
             this.btnTestMare.Name = "btnTestMare";
             this.btnTestMare.Size = new System.Drawing.Size(300, 42);
             this.btnTestMare.TabIndex = 12;
@@ -310,16 +320,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(930, 654);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 627);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 42);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Ieșire";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormLectii
             // 

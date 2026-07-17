@@ -128,7 +128,6 @@ namespace GoGreen
         {
             Close();
         }
-
         private void Culori_CuloriSchimbate(object sender, EventArgs e)
         {
             AplicaTemeCulori();

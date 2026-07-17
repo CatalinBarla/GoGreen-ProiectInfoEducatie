@@ -1,6 +1,4 @@
 # GoGreen
-Date generale
-
 GoGreen este o aplicație educațională dezvoltată pentru a crește gradul de conștientizare privind impactul activităților umane asupra mediului. Prin intermediul unor instrumente interactive și al unor lecții tematice, aplicația îi ajută pe utilizatori să înțeleagă modul în care emisiile de carbon influențează ecosistemele, în special fauna marină și speciile de păsări.
 
 Întregul proiect a fost realizat în Microsoft Visual Studio, utilizând limbajul de programare C#. Obiectivul principal este educarea tinerilor și încurajarea adoptării unui comportament responsabil față de natură și resursele planetei.
@@ -19,11 +17,12 @@ Minime
 •	Spațiu stocare: 250 MB
 •	Conexiune la internet: doar pentru descărcare
 •	Rezoluție: 1280×720
+
 Recomandate
-•	Procesor: 2.0 GHz sau superior
-•	RAM: 1 GB+
-•	Spațiu: 500 MB+
-•	Rezoluție: 1920×1080
+•	Procesor: Intel Core i3 / AMD Ryzen 3 +
+•	RAM: 2 GB+
+•	Spațiu: 1 GB+
+•	Rezoluție: 1920×1080 (Full HD)
 
 Funcționalități
 •	Calculator de amprentă de carbon
