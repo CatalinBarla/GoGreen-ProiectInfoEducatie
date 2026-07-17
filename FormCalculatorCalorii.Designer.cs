@@ -56,6 +56,7 @@
             this.btnReseteaza.TabIndex = 25;
             this.btnReseteaza.Text = "Resetează";
             this.btnReseteaza.UseVisualStyleBackColor = false;
+            this.btnReseteaza.Click += new System.EventHandler(this.btnReseteaza_Click);
             // 
             // btnInstructiuni
             // 
@@ -69,6 +70,7 @@
             this.btnInstructiuni.TabIndex = 12;
             this.btnInstructiuni.Text = "Instructiuni";
             this.btnInstructiuni.UseVisualStyleBackColor = false;
+            this.btnInstructiuni.Click += new System.EventHandler(this.btnInstructiuni_Click);
             // 
             // btnCalculeazaCalorii
             // 
@@ -82,6 +84,7 @@
             this.btnCalculeazaCalorii.TabIndex = 16;
             this.btnCalculeazaCalorii.Text = "Calculează calorii";
             this.btnCalculeazaCalorii.UseVisualStyleBackColor = false;
+            this.btnCalculeazaCalorii.Click += new System.EventHandler(this.btnCalculeazaCalorii_Click);
             // 
             // lblRezultat
             // 

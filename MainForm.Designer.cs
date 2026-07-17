@@ -106,7 +106,7 @@
             this.btnMeteo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.btnMeteo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMeteo.ForeColor = System.Drawing.Color.White;
-            this.btnMeteo.Location = new System.Drawing.Point(0, 307);
+            this.btnMeteo.Location = new System.Drawing.Point(3, 99);
             this.btnMeteo.Name = "btnMeteo";
             this.btnMeteo.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnMeteo.Size = new System.Drawing.Size(280, 35);
@@ -122,7 +122,7 @@
             this.btnLectii.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.btnLectii.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLectii.ForeColor = System.Drawing.Color.White;
-            this.btnLectii.Location = new System.Drawing.Point(0, 266);
+            this.btnLectii.Location = new System.Drawing.Point(3, 58);
             this.btnLectii.Name = "btnLectii";
             this.btnLectii.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnLectii.Size = new System.Drawing.Size(280, 35);
@@ -138,7 +138,7 @@
             this.btnPoster.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.btnPoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPoster.ForeColor = System.Drawing.Color.White;
-            this.btnPoster.Location = new System.Drawing.Point(0, 140);
+            this.btnPoster.Location = new System.Drawing.Point(0, 252);
             this.btnPoster.Name = "btnPoster";
             this.btnPoster.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnPoster.Size = new System.Drawing.Size(280, 35);
@@ -154,7 +154,7 @@
             this.btnCalculatorKcal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.btnCalculatorKcal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculatorKcal.ForeColor = System.Drawing.Color.White;
-            this.btnCalculatorKcal.Location = new System.Drawing.Point(0, 99);
+            this.btnCalculatorKcal.Location = new System.Drawing.Point(0, 211);
             this.btnCalculatorKcal.Name = "btnCalculatorKcal";
             this.btnCalculatorKcal.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnCalculatorKcal.Size = new System.Drawing.Size(280, 35);
@@ -170,7 +170,7 @@
             this.btnCalculatorCarbon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.btnCalculatorCarbon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculatorCarbon.ForeColor = System.Drawing.Color.White;
-            this.btnCalculatorCarbon.Location = new System.Drawing.Point(0, 58);
+            this.btnCalculatorCarbon.Location = new System.Drawing.Point(0, 170);
             this.btnCalculatorCarbon.Name = "btnCalculatorCarbon";
             this.btnCalculatorCarbon.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnCalculatorCarbon.Size = new System.Drawing.Size(280, 35);

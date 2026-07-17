@@ -30,7 +30,30 @@ namespace GoGreen
 
         private void FormDiploma_Load(object sender, EventArgs e)
         {
+            AplicaTemeCulori();
+            Culori.CuloriSchimbate += Culori_CuloriSchimbate;
 
+            if(Utilizatori.gen == "F")
+            {
+                pictureBox1.Image = Image.FromFile(System.IO.Path.Combine(Application.StartupPath, "res/Imagini/diploma_f_1.png"));
+            }
+            else if (Utilizatori.gen == "M")
+            {
+                pictureBox1.Image = Image.FromFile(System.IO.Path.Combine(Application.StartupPath, "res/Imagini/diploma_m_1.png"));
+            }
+        }
+
+        private void AplicaTemeCulori()
+        {
+            this.BackColor = Culori.Backgroundcolor;
+            foreach (Control c in this.Controls)
+            {
+                c.ForeColor = Culori.TextColor;
+            }
+        }
+        private void Culori_CuloriSchimbate(object sender, EventArgs e)
+        {
+            AplicaTemeCulori();
         }
 
         private void btnIesire_Click(object sender, EventArgs e)

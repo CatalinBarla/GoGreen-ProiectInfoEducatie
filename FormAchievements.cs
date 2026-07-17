@@ -70,7 +70,7 @@ namespace GoGreen
 
                     if (pnl.Name == "pnlLectii")
                     {
-                        if (Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteLectii != 10)
+                        if (Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteLectii != 20)
                         {
                             pnl.Visible = false;
                         }
@@ -95,7 +95,13 @@ namespace GoGreen
 
         private void btnAchievements_Click(object sender, EventArgs e)
         {
-            if (pnlCarbon.Visible && pnlCulori.Visible && pnlKcal.Visible && pnlLectii.Visible && pnlMeteo.Visible && pnlPoster.Visible)
+            if(Utilizatori.gen == null)
+            {
+                FormGen op = new FormGen();
+                op.ShowDialog();
+            }
+
+            if (pnlCarbon.Visible && pnlCulori.Visible && pnlKcal.Visible && pnlLectii.Visible && pnlMeteo.Visible && pnlPoster.Visible && Utilizatori.gen != null)
             {
                 FormDiploma op = new FormDiploma();
                 Hide(); op.ShowDialog(); Show();

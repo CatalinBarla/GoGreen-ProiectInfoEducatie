@@ -17,6 +17,7 @@ namespace GoGreen
         public string DataInregistrare;
 
         public static Utilizatori utilizatorlogat = null;
+        public static string gen;
 
         private static string connectionString = "Server=localhost;Database=database;Uid=root;Pwd=;";
 

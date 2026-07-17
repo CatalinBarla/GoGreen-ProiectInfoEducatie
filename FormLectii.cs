@@ -1,5 +1,4 @@
-﻿using Mysqlx;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +14,8 @@ namespace GoGreen
     public partial class FormLectii : Form
     {
         int capitol = 0, lectie = 0;
+        string capn, lectn;
+        bool lok = true;
 
         private bool[] Cap1 = new bool[10] { false, false, false, false, false, false, false, false, false, false };
         private bool[] Cap2 = new bool[10] { false, false, false, false, false, false, false, false, false, false };
@@ -22,6 +23,7 @@ namespace GoGreen
         public FormLectii()
         {
             InitializeComponent();
+            Intrebari.LoadInto_Intrebari();
         }
 
         private void ComutaCapitol(Panel panel)
@@ -39,6 +41,7 @@ namespace GoGreen
         private void btnCapitol1_Click(object sender, EventArgs e)
         {
             ComutaCapitol(panelCapitol1);
+            
         }
 
         private void btnCapitol2_Click(object sender, EventArgs e)
@@ -46,14 +49,22 @@ namespace GoGreen
             ComutaCapitol(panelCapitol2);
         }
 
-        bool ok = true;
         private void btn_Click(object sender, EventArgs e)
         {
+            if(lok == false)
+            {
+                MessageBox.Show("Trebuie să finalizezi testul curent înainte de a continua!");
+                return;
+            }
+
             Button button = (Button)sender;
             capitol = int.Parse(button.Name[button.Name.Length - 1].ToString());
             lectie = int.Parse(button.Name[button.Name.Length - 5].ToString());
 
-            if (capitol == 1)
+            capn = "C" + capitol.ToString();
+            lectn = "L" + lectie.ToString();
+
+            if(capitol == 1)
             {
                 if (Cap1[lectie] == false)
                 {
@@ -61,7 +72,7 @@ namespace GoGreen
                     progressBarCap1.Value += 25;
                 }
             }
-            else if (capitol == 2)
+            else if(capitol == 2)
             {
                 if (Cap2[lectie] == false)
                 {
@@ -72,28 +83,30 @@ namespace GoGreen
 
             LoadIntoTextBox();
 
-            if (progressBarCap1.Value == 100 && progressBarCap2.Value == 100 && ok)
+            if(progressBarCap1.Value == 100 && progressBarCap2.Value == 100)
             {
-                ok = !ok;
                 if (Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteLectii < 10)
                 {
                     Achievements.GetAchievementsByEmail(Utilizatori.utilizatorlogat.Email).PuncteLectii += 10;
-                    MessageBox.Show("Felicitări! Ai terminat toate lecțiile, ai castigat 10 puncte!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ai obținut 10 puncte pentru lecții! Continuă să folosești aplicația pentru a obține mai multe!", "Felicitări!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Achievements.UpdateInBazaDeDate();
                 }
-                else
-                {
-                    MessageBox.Show("Ai atins deja punctajul maxim pentru amprenta de carbon.", "Informație", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-                Achievements.UpdateInBazaDeDate();
             }
-
-
         }
 
-        private void btnLectii_Click(object sender, EventArgs e)
+        private void btnTestMare_Click(object sender, EventArgs e)
         {
-            Close();
+            if (progressBarCap1.Value == progressBarCap1.Maximum && progressBarCap2.Value == progressBarCap2.Maximum)
+            {
+                FormTestMare formTestMare = new FormTestMare();
+                this.Hide();
+                formTestMare.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Trebuie să finalizezi toate lecțiile pentru a putea accesa testul final!");
+            }
         }
 
         private void FormLectii_Load(object sender, EventArgs e)
@@ -101,6 +114,7 @@ namespace GoGreen
             AplicaTemeCulori();
             Culori.CuloriSchimbate += Culori_CuloriSchimbate;
         }
+
         private void AplicaTemeCulori()
         {
             this.BackColor = Culori.Backgroundcolor;
@@ -116,6 +130,7 @@ namespace GoGreen
 
         private void LoadIntoTextBox()
         {
+            string text = "";
             using (MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection("Server=localhost;Database=database;Uid=root;Pwd=;"))
             {
                 conn.Open();
@@ -128,15 +143,14 @@ namespace GoGreen
                     {
                         if (reader.Read())
                         {
+                            // Citim textul nativ RTF salvat corect
                             string textBrut = reader["Text"].ToString();
 
+                            // Îl trimitem direct proprietății .Rtf fără nicio altă modificare intermediară
                             richTextBox1.Rtf = textBrut;
                         }
-
                     }
-
                 }
-
             }
         }
     }

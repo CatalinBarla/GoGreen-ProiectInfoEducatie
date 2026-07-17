@@ -80,6 +80,7 @@ namespace GoGreen
 
                 Culori.Backgroundcolor = Culori.DefaultColor;
                 Culori.TextColor = Color.Black;
+                Utilizatori.gen = null;
             }
         }
 

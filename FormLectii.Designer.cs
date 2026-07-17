@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.panelNavigare = new System.Windows.Forms.Panel();
-            this.btnLectii = new System.Windows.Forms.Button();
+            this.btnTestMare = new System.Windows.Forms.Button();
             this.panelCapitol2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.progressBarCap2 = new System.Windows.Forms.ProgressBar();
             this.btnLectia4Cap2 = new System.Windows.Forms.Button();
             this.btnLectia3Cap2 = new System.Windows.Forms.Button();
@@ -54,7 +55,7 @@
             // 
             // panelNavigare
             // 
-            this.panelNavigare.Controls.Add(this.btnLectii);
+            this.panelNavigare.Controls.Add(this.btnTestMare);
             this.panelNavigare.Controls.Add(this.panelCapitol2);
             this.panelNavigare.Controls.Add(this.panelCapitol1);
             this.panelNavigare.Dock = System.Windows.Forms.DockStyle.Left;
@@ -62,27 +63,22 @@
             this.panelNavigare.Location = new System.Drawing.Point(0, 0);
             this.panelNavigare.Margin = new System.Windows.Forms.Padding(4);
             this.panelNavigare.Name = "panelNavigare";
-            this.panelNavigare.Size = new System.Drawing.Size(312, 681);
+            this.panelNavigare.Size = new System.Drawing.Size(315, 681);
             this.panelNavigare.TabIndex = 0;
             // 
-            // btnLectii
+            // btnTestMare
             // 
-            this.btnLectii.FlatAppearance.BorderSize = 0;
-            this.btnLectii.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.btnLectii.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLectii.ForeColor = System.Drawing.Color.Black;
-            this.btnLectii.Location = new System.Drawing.Point(12, 634);
-            this.btnLectii.Name = "btnLectii";
-            this.btnLectii.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnLectii.Size = new System.Drawing.Size(293, 35);
-            this.btnLectii.TabIndex = 12;
-            this.btnLectii.Text = "Ieșire";
-            this.btnLectii.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLectii.UseVisualStyleBackColor = true;
-            this.btnLectii.Click += new System.EventHandler(this.btnLectii_Click);
+            this.btnTestMare.Location = new System.Drawing.Point(12, 624);
+            this.btnTestMare.Name = "btnTestMare";
+            this.btnTestMare.Size = new System.Drawing.Size(300, 42);
+            this.btnTestMare.TabIndex = 12;
+            this.btnTestMare.Text = "Verificare Cunostinte";
+            this.btnTestMare.UseVisualStyleBackColor = true;
+            this.btnTestMare.Click += new System.EventHandler(this.btnTestMare_Click);
             // 
             // panelCapitol2
             // 
+            this.panelCapitol2.Controls.Add(this.panel1);
             this.panelCapitol2.Controls.Add(this.progressBarCap2);
             this.panelCapitol2.Controls.Add(this.btnLectia4Cap2);
             this.panelCapitol2.Controls.Add(this.btnLectia3Cap2);
@@ -92,8 +88,15 @@
             this.panelCapitol2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCapitol2.Location = new System.Drawing.Point(0, 40);
             this.panelCapitol2.Name = "panelCapitol2";
-            this.panelCapitol2.Size = new System.Drawing.Size(312, 40);
+            this.panelCapitol2.Size = new System.Drawing.Size(315, 40);
             this.panelCapitol2.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 199);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(312, 161);
+            this.panel1.TabIndex = 13;
             // 
             // progressBarCap2
             // 
@@ -195,7 +198,7 @@
             this.panelCapitol1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCapitol1.Location = new System.Drawing.Point(0, 0);
             this.panelCapitol1.Name = "panelCapitol1";
-            this.panelCapitol1.Size = new System.Drawing.Size(312, 40);
+            this.panelCapitol1.Size = new System.Drawing.Size(315, 40);
             this.panelCapitol1.TabIndex = 0;
             // 
             // progressBarCap1
@@ -291,19 +294,18 @@
             // 
             this.panleCentral.Controls.Add(this.richTextBox1);
             this.panleCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panleCentral.Location = new System.Drawing.Point(312, 0);
+            this.panleCentral.Location = new System.Drawing.Point(0, 0);
             this.panleCentral.Margin = new System.Windows.Forms.Padding(4);
             this.panleCentral.Name = "panleCentral";
-            this.panleCentral.Size = new System.Drawing.Size(952, 681);
+            this.panleCentral.Size = new System.Drawing.Size(1264, 681);
             this.panleCentral.TabIndex = 1;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold);
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Location = new System.Drawing.Point(322, 12);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(952, 681);
+            this.richTextBox1.Size = new System.Drawing.Size(930, 654);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -312,8 +314,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.panleCentral);
             this.Controls.Add(this.panelNavigare);
+            this.Controls.Add(this.panleCentral);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLectii";
@@ -347,6 +349,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ProgressBar progressBarCap2;
         private System.Windows.Forms.ProgressBar progressBarCap1;
-        private System.Windows.Forms.Button btnLectii;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnTestMare;
     }
 }

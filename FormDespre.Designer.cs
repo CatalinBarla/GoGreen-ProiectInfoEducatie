@@ -30,16 +30,16 @@ namespace GoGreen
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
+            this.SuspendLayout();
             // 
             // FormDespre
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            CenterToScreen();
-            ClientSize = new Size(800, 450);
-            Name = "FormDespre";
-            Text = "FormDespre";
-            ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "FormDespre";
+            this.Text = "FormDespre";
+            this.Load += new System.EventHandler(this.FormDespre_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
